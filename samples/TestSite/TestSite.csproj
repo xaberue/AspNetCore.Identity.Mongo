@@ -233,7 +233,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\AspNetCore.Identity.Mongo\AspNetCore.Identity.Mongo.csproj" />
+    <ProjectReference Include="..\..\src\AspNetCore.Identity.MongoDb\AspNetCore.Identity.MongoDb.csproj" />
   </ItemGroup>
 
 </Project>
