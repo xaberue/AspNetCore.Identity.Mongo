@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using MongoDB.Bson;
 
-namespace AspNetCore.Identity.Mongo.Model
+namespace AspNetCore.Identity.MongoDb.Models
 {
     public class MongoRole : MongoRole<ObjectId>
     {

@@ -1,31 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
-using DnsClient;
-using System.Data;
-using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace AspNetCore.Identity.Mongo.Model
+namespace AspNetCore.Identity.MongoDb.Models
 {
-    internal class MigrationMongoUser : MigrationMongoUser<ObjectId>
+    public class MongoUser : MongoUser<ObjectId>
     {
-        public MigrationMongoUser() : base() { }
+        public MongoUser() : base() { }
+
+        public MongoUser(string userName) : base(userName) { }
     }
 
-    internal class MigrationMongoUser<TKey> : IdentityUser<TKey> where TKey : IEquatable<TKey>
-{
-        public MigrationMongoUser()
+    public class MongoUser<TKey> : IdentityUser<TKey> where TKey : IEquatable<TKey>
+    {
+        public MongoUser()
         {
             Roles = new List<string>();
             Claims = new List<IdentityUserClaim<string>>();
             Logins = new List<IdentityUserLogin<string>>();
             Tokens = new List<IdentityUserToken<string>>();
-            RecoveryCodes = new List<TwoFactorRecoveryCode>();
         }
 
-        public string AuthenticatorKey { get; set; }
+        public MongoUser(string userName) : this()
+        {
+            UserName = userName;
+            NormalizedUserName = userName.ToUpperInvariant();
+        }
 
         public List<string> Roles { get; set; }
 
@@ -34,7 +36,5 @@ namespace AspNetCore.Identity.Mongo.Model
         public List<IdentityUserLogin<string>> Logins { get; set; }
 
         public List<IdentityUserToken<string>> Tokens { get; set; }
-
-        public List<TwoFactorRecoveryCode> RecoveryCodes { get; set; }
     }
 }

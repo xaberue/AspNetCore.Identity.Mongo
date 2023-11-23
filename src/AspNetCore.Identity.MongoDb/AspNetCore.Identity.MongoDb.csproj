@@ -3,17 +3,17 @@
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
-    <Description>Mongo based identity framework for Asp.Net Core</Description>
+    <Description>MongoDb based Identity library for AspNetCore applications</Description>
     <Copyright>Matteo Fabbri 2018</Copyright>
     <RepositoryUrl>https://github.com/matteofabbri/AspNetCore.Identity.Mongo</RepositoryUrl>
-    <PackageTags>asp core identity mongo framework aspnetcore mongodb dotnetcore netcore</PackageTags>
-    <PackageId>AspNetCore.Identity.Mongo</PackageId>
+    <PackageTags>asp;aspnet;aspnetcore;identity;mongo;mongodb;dotnet;dotnetcore;netcore</PackageTags>
+    <PackageId>AspNetCore.Identity.MongoDb</PackageId>
     <Authors>Matteo Fabbri</Authors>
     <Company />
-    <Product>AspNetCore.Identity.Mongo</Product>
-    <Version>8.3.2</Version>
-    <AssemblyVersion>8.3.2.0</AssemblyVersion>
-    <FileVersion>8.3.2.0</FileVersion>
+    <Product>AspNetCore.Identity.MongoDb</Product>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
     <PackageProjectUrl>https://github.com/matteofabbri/AspNetCore.Identity.Mongo</PackageProjectUrl>
     <NeutralLanguage />
     <PackageReleaseNotes>Removed obsolete properties.</PackageReleaseNotes>

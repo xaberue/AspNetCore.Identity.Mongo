@@ -1,4 +1,4 @@
-﻿using AspNetCore.Identity.Mongo;
+﻿using AspNetCore.Identity.MongoDb;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

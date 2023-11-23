@@ -2,11 +2,10 @@
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
-using AspNetCore.Identity.Mongo.Model;
-using AspNetCore.Identity.Mongo.Mongo;
+using AspNetCore.Identity.MongoDb.Models;
 using MongoDB.Driver;
 
-namespace AspNetCore.Identity.Mongo.Migrations
+namespace AspNetCore.Identity.MongoDb.Migrations
 {
     internal static class Migrator
     {

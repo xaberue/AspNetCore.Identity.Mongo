@@ -1,4 +1,4 @@
-﻿using AspNetCore.Identity.Mongo.Model;
+﻿using AspNetCore.Identity.MongoDb.Models;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace SampleSite.Identity

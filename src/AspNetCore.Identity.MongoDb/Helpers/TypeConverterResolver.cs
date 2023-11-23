@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace AspNetCore.Identity.Mongo.Mongo
+namespace AspNetCore.Identity.MongoDb.Helpers
 {
     internal static class TypeConverterResolver
     {

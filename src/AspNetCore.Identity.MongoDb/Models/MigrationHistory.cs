@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using MongoDB.Bson;
 
-namespace AspNetCore.Identity.Mongo.Model
+namespace AspNetCore.Identity.MongoDb.Models
 {
     public class MigrationHistory : IComparable<MigrationHistory>, IComparable
     {
@@ -30,7 +30,7 @@ namespace AspNetCore.Identity.Mongo.Model
         {
             return Comparer<MigrationHistory>.Default.Compare(left, right) < 0;
         }
-        
+
         public static bool operator >(MigrationHistory left, MigrationHistory right)
         {
             return Comparer<MigrationHistory>.Default.Compare(left, right) > 0;

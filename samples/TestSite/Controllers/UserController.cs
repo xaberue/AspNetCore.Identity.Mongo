@@ -1,12 +1,12 @@
 ﻿using System.Security.Claims;
 using System.Threading.Tasks;
-using AspNetCore.Identity.Mongo.Model;
 using SampleSite.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using MongoDB.Bson;
 using TestSite.Models;
+using AspNetCore.Identity.MongoDb.Models;
 
 namespace SampleSite.Controllers
 {

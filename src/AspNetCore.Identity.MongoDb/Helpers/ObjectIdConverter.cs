@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Text;
 
-namespace AspNetCore.Identity.Mongo.Mongo
+namespace AspNetCore.Identity.MongoDb.Helpers
 {
     class ObjectIdConverter : TypeConverter
     {
@@ -18,7 +18,7 @@ namespace AspNetCore.Identity.Mongo.Mongo
             return base.CanConvertFrom(context, sourceType);
         }
 
-        public override object ConvertFrom(ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value)
+        public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value)
         {
             if (value is string)
             {

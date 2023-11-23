@@ -6,14 +6,14 @@ using System.Linq.Expressions;
 using System.Security.Claims;
 using System.Threading;
 using System.Threading.Tasks;
-using AspNetCore.Identity.Mongo.Model;
-using AspNetCore.Identity.Mongo.Mongo;
+using AspNetCore.Identity.MongoDb.Helpers;
+using AspNetCore.Identity.MongoDb.Models;
 using Microsoft.AspNetCore.Identity;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Linq;
 
-namespace AspNetCore.Identity.Mongo.Stores
+namespace AspNetCore.Identity.MongoDb.Stores
 {
     /// <summary>
     /// Represents a new instance of a persistence store for the specified user and role types.
@@ -1225,7 +1225,7 @@ namespace AspNetCore.Identity.Mongo.Stores
         {
             if (id == null)
             {
-                return default(TKey);
+                return default;
             }
             return (TKey)TypeDescriptor.GetConverter(typeof(TKey)).ConvertFromInvariantString(id);
         }
@@ -1237,7 +1237,7 @@ namespace AspNetCore.Identity.Mongo.Stores
         /// <returns>An <see cref="string"/> representation of the provided <paramref name="id"/>.</returns>
         public virtual string ConvertIdToString(TKey id)
         {
-            if (object.Equals(id, default(TKey)))
+            if (Equals(id, default(TKey)))
             {
                 return null;
             }

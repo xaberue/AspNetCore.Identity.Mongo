@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
-using System.Threading.Tasks;
-using AspNetCore.Identity.Mongo.Migrations;
-using AspNetCore.Identity.Mongo.Model;
-using AspNetCore.Identity.Mongo.Mongo;
-using AspNetCore.Identity.Mongo.Stores;
+﻿using AspNetCore.Identity.MongoDb.Helpers;
+using AspNetCore.Identity.MongoDb.Migrations;
+using AspNetCore.Identity.MongoDb.Models;
+using AspNetCore.Identity.MongoDb.Stores;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Bson;
+using System;
 
-namespace AspNetCore.Identity.Mongo
+namespace AspNetCore.Identity.MongoDb
 {
     public static class MongoStoreExtensions
     {
@@ -19,7 +15,7 @@ namespace AspNetCore.Identity.Mongo
             IdentityErrorDescriber identityErrorDescriber = null)
             where TUser : MongoUser
         {
-            return AddMongoDbStores<TUser, MongoRole, ObjectId>(builder, setupDatabaseAction, identityErrorDescriber);
+            return builder.AddMongoDbStores<TUser, MongoRole, ObjectId>(setupDatabaseAction, identityErrorDescriber);
         }
 
         public static IdentityBuilder AddMongoDbStores<TUser, TRole, TKey>(this IdentityBuilder builder, Action<MongoIdentityOptions> setupDatabaseAction,
